@@ -12,13 +12,14 @@ on:
   push:
   workflow_dispatch:
 
+
 permissions:
   contents: read
   id-token: write
-  environment: release
 
 jobs:
   deploy:
+    environment: release
     runs-on: ubuntu-latest
 
     steps:
