@@ -15,7 +15,7 @@ class _HTTPreqClient:
 
     def post(self, action: str, validation_name: str, validation_data: str) -> None:
         url = f"{self.endpoint}/{action}"
-        if validation_name.endswith('.'):
+        if validation_name.endswith("."):
             fqdn = validation_name
         else:
             fqdn = f"{validation_name}."
