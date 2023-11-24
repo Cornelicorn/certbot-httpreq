@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-httpreq"
+version = "0.1.0"
+dependencies = [
+    "certbot",
+    "httpx",
+]
+
+[project.entry-points."certbot.plugins"]
+dns-httpreq = "certbot_httpreq:Authenticator"
